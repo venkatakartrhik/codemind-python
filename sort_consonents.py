@@ -18,4 +18,4 @@ for k in range(len(n)):
         if l[j]=="*":
             l[j]=x[a]
             a+=1
-    print(''.join(l),end=" ")
+    print("".join(l),end=" ")

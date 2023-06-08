@@ -1,14 +1,27 @@
-def prime(n):
-    if n==1:
-        return False
-    for i in range(2,n//2+1):
-        if n%i==0:
-            return False
-    return True
-t=int(input())
-for _ in range(t):
+m=int(input())
+for l in range(m):
     n=int(input())
-    l=[i for i in range(n-5,n+5) if prime(i)]
-    k=[abs(n-j) for j in l]
-    m=min(k)
-    print(l[k.index(m)])
+    for j in range(n,-1,-1):
+        c=0
+        for k in range(1,j+1):
+            if j%k==0:
+                c+=1
+        if c==2:
+            mi=j
+            break
+    for j in range(n,n**2):
+        c1=0
+        for k in range(1,j+1):
+            if j%k==0:
+                c1+=1
+        if c1==2:
+            ma=j
+            break
+    r1=n-mi
+    r2=ma-n
+    if r1<r2:
+        print(mi)
+    elif r1==r2:
+        print(mi)
+    else:
+        print(ma)

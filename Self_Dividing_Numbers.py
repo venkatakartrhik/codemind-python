@@ -1,13 +1,16 @@
-def selfdividing(num):
-    temp=num
-    while temp:
-        d=temp%10
-        temp=temp//10
-        if d==0 or num%d!=0:
-            return False
-    return True
 n=int(input())
 m=int(input())
 for i in range(n,m+1):
-    if selfdividing(i):
-        print(i,end=" ")
+    l=s=i
+    c=0
+    f=0
+    while l!=0:
+        r=l%10
+        c+=1
+        if r==0:
+            break
+        if s%r==0:
+            f+=1
+        l=l//10
+    if f==c:
+        print(i,end=' ')

@@ -1,11 +1,12 @@
-def adddigit(num):
+def add(x):
     s=0
-    while num:
-        d=num%10
-        num=num//10
-        s=s+d
-    return s
+    while x!=0:
+        r=x%10
+        s=s+r
+        x=x//10
+    if len(str(s))==1:
+        print(s)
+    else:
+        add(s)
 n=int(input())
-while n>9:
-    n=adddigit(n)
-print(n)
+add(n)

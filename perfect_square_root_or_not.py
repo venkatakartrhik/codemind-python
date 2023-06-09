@@ -1,7 +1,7 @@
+import math
 n=int(input())
-for i in range(n):
-    if(i*i==n):
-        print("True")
-        break
+k=math.sqrt(n)
+if n%k==0:
+    print(True)
 else:
-    print("False")
+    print(False)

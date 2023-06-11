@@ -1,0 +1,5 @@
+n,m=map(int,input().split())
+l=len(str(n))
+f=n//(10**(l-m))
+l1=n%(10**(m))
+print(abs(f-l1))

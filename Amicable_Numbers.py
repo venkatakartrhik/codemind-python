@@ -1,14 +1,8 @@
 a=int(input())
 b=int(input())
-pfs_a=0
-for i in range(1,a):
-    if a%i==0:
-        pfs_a+=i
-pfs_b=0
-for i in range(1,b):
-    if b%i==0:
-        pfs_b+=i
-if(a==pfs_b and b==pfs_a):
+c=[i for i in range(1,a) if a%i==0]
+d=[i for i in range(1,b) if b%i==0]
+if a==sum(d) and b==sum(c):
     print("Amicable")
 else:
     print("Not Amicable")

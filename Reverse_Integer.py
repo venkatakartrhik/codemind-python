@@ -1,4 +1,4 @@
-def rev(n):
+def reverse(n):
     rev=0
     if n>=0:
         while n:
@@ -13,6 +13,7 @@ def rev(n):
             n=n//10
             rev=rev*10+d
         return rev*(-1)
+    
 n=int(input())
-res=rev(n)
+res=reverse(n)
 print(res)

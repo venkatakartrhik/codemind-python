@@ -1,16 +1,11 @@
-
-def reverse(num):
-    rev=0
-    while num:
-        d=num%10
-        num=num//10
-        rev=rev*10+d
-    return rev
+def rev(n):
+    s=str(n)
+    return int(s[::-1])
 n=int(input())
-s1=n**2
-r=reverse(n)
-s2=r**2
-if s1==reverse(s2):
-    print("True")
+s=n**2
+r=rev(n)
+s_r=r**2
+if s==rev(s_r):
+    print(True)
 else:
-    print("False")
+    print(False)
